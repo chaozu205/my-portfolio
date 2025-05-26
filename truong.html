@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ - Tên Trường Học</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Font chữ tùy chỉnh (ví dụ) */
+        body {
+            font-family: 'Inter', sans-serif; /* Inter là một font phổ biến và dễ đọc */
+        }
+        .hero-bg {
+            background-image: url('https://placehold.co/1200x600/3498db/ffffff?text=Chào+Mừng+Đến+Trường+Chúng+Tôi');
+            background-size: cover;
+            background-position: center;
+        }
+        .nav-link {
+            @apply px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-sky-100 hover:text-sky-700 transition-colors;
+        }
+        .nav-link-mobile {
+            @apply block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-sky-100 hover:text-sky-700 transition-colors;
+        }
+        .footer-link {
+            @apply text-gray-400 hover:text-sky-500 transition-colors;
+        }
+        /* Hiệu ứng cho card tin tức */
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 lg:px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <img src="https://placehold.co/50x50/3498db/ffffff?text=LOGO" alt="Logo Trường Học" class="h-10 w-10 rounded-full">
+                        <span class="text-xl font-bold text-sky-700">Tên Trường Học</span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex space-x-2">
+                    <a href="index.html" class="nav-link bg-sky-100 text-sky-700">Trang Chủ</a>
+                    <a href="gioithieu.html" class="nav-link">Giới Thiệu</a>
+                    <a href="chuongtrinhhoc.html" class="nav-link">Chương Trình Học</a>
+                    <a href="tuyensinh.html" class="nav-link">Tuyển Sinh</a>
+                    <a href="tintuc.html" class="nav-link">Tin Tức</a>
+                    <a href="lienhe.html" class="nav-link">Liên Hệ</a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-sky-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-500 rounded-md p-2">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden mt-2 pb-3 space-y-1">
+                <a href="index.html" class="nav-link-mobile bg-sky-100 text-sky-700">Trang Chủ</a>
+                <a href="gioithieu.html" class="nav-link-mobile">Giới Thiệu</a>
+                <a href="chuongtrinhhoc.html" class="nav-link-mobile">Chương Trình Học</a>
+                <a href="tuyensinh.html" class="nav-link-mobile">Tuyển Sinh</a>
+                <a href="tintuc.html" class="nav-link-mobile">Tin Tức</a>
+                <a href="lienhe.html" class="nav-link-mobile">Liên Hệ</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-bg h-[60vh] flex items-center justify-center text-white relative">
+            <div class="absolute inset-0 bg-black opacity-40"></div> <div class="text-center z-10 p-4">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">Chào Mừng Đến Với Trường [Tên Trường Học]</h1>
+                <p class="text-lg md:text-2xl mb-8 drop-shadow-md">Nơi Ươm Mầm Tri Thức - Chắp Cánh Tương Lai</p>
+                <a href="tuyensinh.html" class="bg-sky-600 hover:bg-sky-700 text-white font-semibold py-3 px-8 rounded-lg text-lg transition-colors shadow-lg hover:shadow-xl">
+                    Tìm Hiểu Thêm Về Tuyển Sinh
+                </a>
+            </div>
+        </section>
+
+        <section class="py-12 md:py-20 bg-white">
+            <div class="container mx-auto px-4 lg:px-6">
+                <div class="text-center mb-10 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-sky-700 mb-3">Về Chúng Tôi</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Trường [Tên Trường Học] tự hào là một môi trường giáo dục tiên tiến, năng động và sáng tạo,
+                        cam kết mang đến cho học sinh nền tảng kiến thức vững chắc và kỹ năng cần thiết để thành công.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="text-sky-600 mb-4">
+                            <i class="fas fa-chalkboard-teacher fa-3x"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Đội Ngũ Giáo Viên</h3>
+                        <p class="text-gray-600">Giàu kinh nghiệm, tận tâm và luôn đổi mới phương pháp giảng dạy.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="text-sky-600 mb-4">
+                            <i class="fas fa-graduation-cap fa-3x"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Chương Trình Học</h3>
+                        <p class="text-gray-600">Đa dạng, cập nhật, chú trọng phát triển toàn diện cho học sinh.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="text-sky-600 mb-4">
+                            <i class="fas fa-school fa-3x"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Cơ Sở Vật Chất</h3>
+                        <p class="text-gray-600">Hiện đại, an toàn, tạo điều kiện học tập và vui chơi tốt nhất.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 md:py-20">
+            <div class="container mx-auto px-4 lg:px-6">
+                <div class="text-center mb-10 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-sky-700 mb-3">Tin Tức & Sự Kiện</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Cập nhật những thông tin và hoạt động mới nhất của nhà trường.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 news-card">
+                        <img src="https://placehold.co/600x400/9b59b6/ffffff?text=Sự+Kiện+1" alt="Hình ảnh tin tức 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-xs text-sky-600 font-semibold bg-sky-100 px-2 py-1 rounded-full">Sự Kiện</span>
+                            <h3 class="text-xl font-semibold my-2 text-gray-800 hover:text-sky-700 transition-colors"><a href="tintuc.html#su-kien-1">Lễ Khai Giảng Năm Học Mới 2025-2026</a></h3>
+                            <p class="text-gray-600 text-sm mb-3">Ngày 05/09/2025</p>
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Buổi lễ khai giảng đã diễn ra thành công tốt đẹp với sự tham gia của toàn thể giáo viên, học sinh và quý vị phụ huynh...
+                            </p>
+                            <a href="tintuc.html#su-kien-1" class="inline-block mt-4 text-sky-600 hover:text-sky-800 font-medium">Đọc thêm &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 news-card">
+                        <img src="https://placehold.co/600x400/2ecc71/ffffff?text=Hoạt+Động+Ngoại+Khóa" alt="Hình ảnh tin tức 2" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-xs text-green-600 font-semibold bg-green-100 px-2 py-1 rounded-full">Hoạt Động</span>
+                            <h3 class="text-xl font-semibold my-2 text-gray-800 hover:text-sky-700 transition-colors"><a href="tintuc.html#hoat-dong-1">Ngày Hội Thể Thao Mùa Thu</a></h3>
+                            <p class="text-gray-600 text-sm mb-3">Ngày 15/10/2025</p>
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Các em học sinh đã có những giây phút vui vẻ và bổ ích qua các hoạt động thể thao đa dạng...
+                            </p>
+                            <a href="tintuc.html#hoat-dong-1" class="inline-block mt-4 text-green-600 hover:text-green-800 font-medium">Đọc thêm &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 news-card md:col-span-2 lg:col-span-1">
+                         <img src="https://placehold.co/600x400/e74c3c/ffffff?text=Thông+Báo+Quan+Trọng" alt="Hình ảnh tin tức 3" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-xs text-red-600 font-semibold bg-red-100 px-2 py-1 rounded-full">Thông Báo</span>
+                            <h3 class="text-xl font-semibold my-2 text-gray-800 hover:text-sky-700 transition-colors"><a href="tintuc.html#thong-bao-1">Thông Báo Về Kỳ Thi Học Kỳ I</a></h3>
+                            <p class="text-gray-600 text-sm mb-3">Ngày 01/11/2025</p>
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                Nhà trường xin thông báo lịch thi chi tiết cho kỳ thi học kỳ I sắp tới...
+                            </p>
+                            <a href="tintuc.html#thong-bao-1" class="inline-block mt-4 text-red-600 hover:text-red-800 font-medium">Đọc thêm &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="tintuc.html" class="bg-sky-600 hover:bg-sky-700 text-white font-semibold py-3 px-8 rounded-lg text-lg transition-colors shadow-md hover:shadow-lg">
+                        Xem Tất Cả Tin Tức
+                    </a>
+                </div>
+            </div>
+        </section>
+
+         <section class="py-12 md:py-20 bg-sky-700 text-white">
+            <div class="container mx-auto px-4 lg:px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Sẵn Sàng Gia Nhập Cộng Đồng Của Chúng Tôi?</h2>
+                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+                    Tìm hiểu thêm về quy trình tuyển sinh và các chương trình học hấp dẫn tại trường [Tên Trường Học].
+                </p>
+                <div class="space-y-4 md:space-y-0 md:space-x-4">
+                    <a href="tuyensinh.html" class="bg-white hover:bg-gray-100 text-sky-700 font-semibold py-3 px-8 rounded-lg text-lg transition-colors shadow-md hover:shadow-lg inline-block">
+                        Đăng Ký Tuyển Sinh
+                    </a>
+                    <a href="lienhe.html" class="border-2 border-white hover:bg-white hover:text-sky-700 text-white font-semibold py-3 px-8 rounded-lg text-lg transition-colors shadow-md hover:shadow-lg inline-block">
+                        Liên Hệ Tư Vấn
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-4 lg:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <a href="index.html" class="flex items-center space-x-2 mb-4">
+                        <img src="https://placehold.co/40x40/ffffff/3498db?text=LOGO" alt="Logo Trường Học" class="h-8 w-8 rounded-full">
+                        <span class="text-lg font-semibold text-white">Tên Trường Học</span>
+                    </a>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        Địa chỉ: Số 123, Đường ABC, Phường XYZ, Quận Hoàn Kiếm, Hà Nội.
+                    </p>
+                    <p class="text-sm text-gray-400 mt-2">Điện thoại: (024) 3888 9999</p>
+                    <p class="text-sm text-gray-400">Email: info@tentruonghoc.edu.vn</p>
+                </div>
+
+                <div>
+                    <h5 class="text-lg font-semibold text-white mb-4">Liên Kết Nhanh</h5>
+                    <ul class="space-y-2">
+                        <li><a href="gioithieu.html" class="footer-link">Về Chúng Tôi</a></li>
+                        <li><a href="chuongtrinhhoc.html" class="footer-link">Chương Trình Học</a></li>
+                        <li><a href="tuyensinh.html" class="footer-link">Tuyển Sinh</a></li>
+                        <li><a href="tintuc.html" class="footer-link">Tin Tức & Sự Kiện</a></li>
+                        <li><a href="lienhe.html" class="footer-link">Liên Hệ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="text-lg font-semibold text-white mb-4">Chương Trình</h5>
+                    <ul class="space-y-2">
+                        <li><a href="chuongtrinhhoc.html#mam-non" class="footer-link">Mầm Non</a></li>
+                        <li><a href="chuongtrinhhoc.html#tieu-hoc" class="footer-link">Tiểu Học</a></li>
+                        <li><a href="chuongtrinhhoc.html#thcs" class="footer-link">Trung Học Cơ Sở</a></li>
+                        <li><a href="chuongtrinhhoc.html#thpt" class="footer-link">Trung Học Phổ Thông</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="text-lg font-semibold text-white mb-4">Kết Nối Với Chúng Tôi</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-sky-400 transition-colors"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-sky-400 transition-colors"><i class="fab fa-youtube fa-lg"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-sky-400 transition-colors"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-sky-400 transition-colors"><i class="fab fa-tiktok fa-lg"></i></a>
+                    </div>
+                     <p class="text-sm text-gray-500 mt-6">
+                        Đăng ký nhận bản tin để không bỏ lỡ thông tin quan trọng từ nhà trường.
+                    </p>
+                    <form class="mt-2 flex">
+                        <input type="email" placeholder="Nhập email của bạn" class="w-full px-3 py-2 rounded-l-md text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-sky-500">
+                        <button type="submit" class="bg-sky-600 hover:bg-sky-700 text-white px-4 py-2 rounded-r-md text-sm font-semibold transition-colors">Đăng Ký</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-sm text-gray-500">&copy; <span id="currentYear"></span> Tên Trường Học. Bảo lưu mọi quyền.</p>
+                <p class="text-xs text-gray-600 mt-1">Thiết kế bởi [Tên của bạn/Công ty của bạn] (Tùy chọn)</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTopBtn" class="hidden fixed bottom-5 right-5 bg-sky-600 hover:bg-sky-700 text-white p-3 rounded-full shadow-lg transition-opacity duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // Thay đổi icon menu (tùy chọn)
+            const icon = mobileMenuButton.querySelector('svg');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />';
+            } else {
+                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
+            }
+        });
+
+        // Cập nhật năm hiện tại ở footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Nút Back to Top
+        const backToTopBtn = document.getElementById('backToTopBtn');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopBtn.classList.remove('hidden');
+                backToTopBtn.classList.add('opacity-100');
+
+            } else {
+                backToTopBtn.classList.add('hidden');
+                backToTopBtn.classList.remove('opacity-100');
+            }
+        };
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+
+        // Đóng menu mobile khi click vào link (cho Single Page Application hoặc khi điều hướng trong cùng trang)
+        // Đối với trang tĩnh nhiều file HTML, hành động này không quá cần thiết vì trang sẽ tải lại
+        // nhưng có thể hữu ích nếu bạn có các anchor link trong cùng một trang dài.
+        const mobileNavLinks = mobileMenu.querySelectorAll('a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.querySelector('svg').innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />';
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
